@@ -1,0 +1,129 @@
+//Betslip
+#betslip{
+  position:relative;
+  z-index:5;
+}
+
+.button{
+  z-index: 10;
+  position: relative;
+}
+
+.betslip-container{
+  width:30%;
+  position:fixed;
+  background:#fff;
+  border-left:3px solid #949fb0;
+  top:0;
+  right:0;
+  height:100vh;
+}
+
+#betslip.false{
+
+  .betslip-container{
+    right:-100%;
+    @include transition(all 0.7s ease);
+  }
+
+}
+
+#betslip.true{
+
+  .button{
+    right: 0;
+    top:3%;
+    position:fixed;
+  }
+
+  .betslip-container{
+    right:0;
+    padding:5% 0 0 0;
+    @include transition(all 0.5s ease);
+  }
+
+  .line-2{
+    opacity:0;
+    @include transition(all 0.5s ease);
+  }
+
+  .line-1{
+    top:12px;
+    @include transform(rotate(-45deg));
+  }
+
+  .line-3{
+    @include transform(rotate(45deg));
+    top:-14px;
+  }
+}
+
+.betslip-market{
+  text-align:center;
+  margin:0 5% 10% 5%;
+  border-bottom:2px solid #56606a;
+  padding:0 5% 5% 5%;
+}
+
+.betslip-market-name{
+  color: #56606a;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+}
+
+.betslip-selection-price{
+  font-size: 25px;
+  color: #47525d;
+  font-weight: bold;
+}
+
+.delete-selection{
+  background: #47525d;
+  border-radius: 6px;
+  color: #fff;
+  padding: 8px 20px;
+  text-align: center;
+  font-size: 13px;
+  @include transition(all 0.3s ease);
+  cursor:pointer;
+  outline:none;
+}
+
+.delete-selection:active{
+  background-color: #47525d;
+  box-shadow: 0 2px #626c76;
+  transform: translateY(4px);
+}
+
+.delete-selection:hover{
+  @include transition(all 0.3s ease);
+  opacity:0.8;
+}
+
+@keyframes animateCloseLine2 {
+  from   {right:0;}
+  to {right:45px; opacity:0;}
+}
+
+//Button
+.button{
+  margin: 0 2% 0 0;
+  float: right;
+  position: absolute;
+  top: -25px;
+  right: 0;
+}
+
+.line-1, .line-2, .line-3{
+  width:40px;
+  height:6px;
+  float:right;
+  clear:both;
+  position:relative;
+  margin:0 0 7px 0;
+  background:#676767;
+  @include transition(all 0.5s ease);
+}
+
+

@@ -1,21 +1,48 @@
 import React, { Component } from 'react';
-import logo from './../assets/images/logo.svg';
-import './../assets/css/App.css';
+import EventList from './../components/views/EventList'
+import Betslip from './../components/views/Betslip'
+import {connect} from 'react-redux'
+import {fetchEvents, fetchMarkets, fetchSelections} from './../actions'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+export class App extends Component {
+
+    componentDidMount(){
+        //Fetch all data and push it into the Redux store
+        this.props.fetchEvents();
+        this.props.fetchMarkets();
+        this.props.fetchSelections();
+    }
+
+    render() {
+        const {betslipStatus} = this.props;
+
+        return (
+            <section id="bet-app">
+
+                <Betslip />
+                <EventList />
+
+                <div id="overlay" className={betslipStatus}></div>
+
+            </section>
+        );
+    }
 }
 
-export default App;
+function mapStateToProps(state){
+    return{
+        betslipStatus: state.betslip.status
+    }
+}
+
+function mapDispatchToProps(dispatch){
+    return {
+        fetchEvents: () => dispatch(fetchEvents()),
+        fetchMarkets: () => dispatch(fetchMarkets()),
+        fetchSelections: () => dispatch(fetchSelections())
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
+
+

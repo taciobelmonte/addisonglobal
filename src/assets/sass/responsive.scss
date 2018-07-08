@@ -1,0 +1,39 @@
+@import "bourbon/bourbon", "neat/neat";
+
+@media (max-width: 1200px) {  }
+
+@media (max-width:1140px){  }
+
+@media(max-width:1100px){  }
+
+@media (max-width: 992px) {  }
+
+@media (max-width: 768px) {  }
+
+@media (max-width:660px){
+
+  #betslip.true .betslip-container{
+    padding:10% 8% 0 5%;
+    width:80%;
+  }
+
+  .event-selection{
+    padding: 2% 7%;
+    font-size: 14px;
+  }
+
+  .button{
+    top:-35px;
+  }
+
+  #event-list{
+    margin:50px 0 4%;
+  }
+
+}
+
+@media (max-width: 520px) {  }
+
+@media (max-width: 460px) {  }
+
+@media (max-width: 390px) {  }

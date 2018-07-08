@@ -1,0 +1,78 @@
+//EVENTS
+#event-list{
+  padding:0 2%;
+  margin:45px 0 4%;
+}
+
+//SINGLE EVENT BLOCK
+.event{
+  float:left;
+  border:2px solid #949fb0;
+  margin:3% 0;
+  width:100%;
+
+  .event-header{
+    padding:0 2%;
+    border-bottom:2px solid #949fb0;
+  }
+
+  h2{
+    color:#56606a;
+
+    font-weight:500;
+    font-size:20px;
+    text-align:center;
+  }
+}
+
+.event-market{
+  width:100%;
+  clear:both;
+  float:left;
+  min-height:250px;
+  border-bottom:2px solid #949fb0;
+}
+
+.event-selection-container{
+  float: left;
+  width: 100%;
+  text-align: center;
+}
+
+.event-selection{
+  @include transition(all 0.4s ease);
+  padding: 2% 5%;
+  margin: 2%;
+  border-radius: 7px;
+  border: 2px solid #757d85;
+  display:inline-block;
+
+  p{
+    margin:0;
+  }
+
+  span{
+    float:left;
+    clear:both;
+    text-align:center;
+    width:100%;
+  }
+}
+
+.event-selection:hover{
+  background:#47525d;
+  color:#fff;
+}
+
+.event-selection.added{
+  @include transition(all 0.4s ease);
+  background: #008000;
+  color: #fff;
+  border: 2px solid #fff;
+  box-shadow: 0px 1px 10px #a9a9a9;
+}
+
+.market-name{
+  color:#9ba6b6;
+  text-align:center;
+}
