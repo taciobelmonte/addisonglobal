@@ -13,7 +13,7 @@ To setup this app, you will need to follow the instructions below:
 It's done! You should have this project running straight way...
 
 
-Demo: https://addisonglobal.heroku.app.com
+Demo: https://addisonglobal.herokuapp.com/
 
 Developed by @Tacio Belmonte - 2018
 
