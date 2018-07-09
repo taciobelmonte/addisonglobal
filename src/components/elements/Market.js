@@ -6,7 +6,6 @@ export class Market extends Component {
 
     render() {
         const {key, market} = this.props;
-
         return (
             <div id={key} className="event-market">
                 <p className="market-name">{market.name}</p>

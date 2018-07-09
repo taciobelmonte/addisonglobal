@@ -15,15 +15,11 @@ export class App extends Component {
 
     render() {
         const {betslipStatus} = this.props;
-
         return (
             <section id="bet-app">
-
                 <Betslip />
                 <EventList />
-
                 <div id="overlay" className={betslipStatus}></div>
-
             </section>
         );
     }

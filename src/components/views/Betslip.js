@@ -30,7 +30,6 @@ class Betslip extends Component {
                 </a>
 
                 <div className="betslip-container">
-
                     {betslip.data && Object.keys(betslip.data).map((item, index) => (
                         <div key={index} className="betslip-market">
                             <p className="betslip-market-name">{selections[betslip.data[item]].name + " "+ markets[item].name}</p>
@@ -40,7 +39,6 @@ class Betslip extends Component {
                             <button onClick={(id) => this.removeFromBetslip(markets[item].id)} className="delete-selection">Delete</button>
                         </div>
                     ))}
-
                 </div>
             </div>
         );

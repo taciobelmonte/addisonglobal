@@ -5,7 +5,6 @@ import {add, remove} from './../../actions'
 class Selection extends Component {
 
     handleBetslip = (selectionId, marketId, marketSelected) =>{
-
         if(marketSelected === 'added'){
             //Remove from Betslip
             this.props.remove(marketId);
@@ -13,12 +12,10 @@ class Selection extends Component {
             //Add to Betslip
             this.props.add(selectionId, marketId);
         }
-
     };
 
     render() {
         const {key, selection, market, selected} = this.props;
-
         return (
             <a onClick={() => this.handleBetslip(selection.id, market, selected[market])}
                key={key}
@@ -42,17 +39,14 @@ function mapStateToProps(state, props){
     });
 
     Object.keys(state.betslip.data).filter(function(item){
-
         if(item === props.market && state.betslip.data[item] === props.id){
             obj[props.market] = 'added';
             return true;
         }
         return false;
     });
-
     return { selection:selection, selected:obj }
 }
-
 
 function mapDispatchToProps(dispatch){
     return {

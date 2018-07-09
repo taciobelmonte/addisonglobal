@@ -6,7 +6,6 @@ export class EventList extends Component {
 
      render() {
         const {events} = this.props;
-
         return (
             <section id="event-list">
                 {events && Object.keys(events).map((key, index) => (
