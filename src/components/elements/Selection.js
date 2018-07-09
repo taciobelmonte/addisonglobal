@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux'
 import {add, remove} from './../../actions'
 
-class Selection extends Component {
+export class Selection extends Component {
 
     handleBetslip = (selectionId, marketId, marketSelected) =>{
         if(marketSelected === 'added'){

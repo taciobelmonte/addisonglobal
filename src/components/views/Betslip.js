@@ -12,6 +12,15 @@ class Betslip extends Component {
         }
     };
 
+    componentDidMount(){
+
+        //Close betslip when pressing esc
+        document.addEventListener('keyup', (e) => {
+            if (e.keyCode === 27)
+                this.props.changeBetslipStatus("false");
+        });
+    }
+
     removeFromBetslip = (marketId) =>{
         this.props.remove(marketId);
         this.props.changeBetslipStatus("false");

@@ -33,7 +33,6 @@ function mapStateToProps(state, props){
     return { market:market }
 }
 
-
 export default connect(mapStateToProps)(Market);
 
 
