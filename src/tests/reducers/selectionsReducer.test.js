@@ -1,4 +1,4 @@
-import selectionsReducer  from './../../reducers/marketsReducer'
+import selectionsReducer  from './../../reducers/selectionsReducer'
 import {FETCH_SELECTIONS} from './../../actions'
 
 describe('>>>REDUCER --- Test selectionsReducer',()=> {
