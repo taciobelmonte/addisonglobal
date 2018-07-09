@@ -15,7 +15,7 @@ describe('Testing fetch api', () => {
         });
 
         //assert on the times called and arguments given to fetch
-        expect(fetch.mock.calls[0][0]).toEqual('http://www.mocky.io/v2/59f08692310000b4130e9f71');
+        expect(fetch.mock.calls[0][0]).toEqual('https://www.mocky.io/v2/59f08692310000b4130e9f71');
     })
 
 });

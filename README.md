@@ -12,8 +12,16 @@ To setup this app, you will need to follow the instructions below:
 
 It's done! You should have this project running straight way...
 
-Demo: https://addisonglobal.herokuapp.com/
+You can also check a version running at: https://addisonglobal.herokuapp.com/
 
+
+### Tests
+
+Once you have the app installed and running, you can run the command below to see tests.
+
+`yarn test` or `npm test`
+
+All tests used in this project can be found inside the folder **tests**
 
 ### Stack used
 
@@ -60,5 +68,23 @@ This way, we can access the information of the object directly through the ID.
 In addition, with the redux store organized in the format that was explained, we have that any object of any entity can be accessed in any component.
 
 
+##**Folder structure:**
+
+
+```bash
+   ├── public
+   |   ├── favicon.png
+   |   ├── manifest.json
+   │   └── index.html
+   └── src
+       ├── actions
+       ├── assets
+       ├── components
+       ├── reducers
+       ├── tests
+       ├── utils
+       ├── index.js
+       └── setupTests.js
+   ```
+
 **Developed by @Tacio Belmonte - 2018**
-//
