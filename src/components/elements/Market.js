@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux'
 import Selection from './Selection'
 
-class Market extends Component {
+export class Market extends Component {
 
     render() {
         const {key, market} = this.props;
