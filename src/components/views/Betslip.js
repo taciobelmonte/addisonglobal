@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux'
-import {changeBetslipStatus} from './../../actions'
+import {changeBetslipStatus, remove} from './../../actions'
 
 class Betslip extends Component {
 
@@ -10,6 +10,11 @@ class Betslip extends Component {
         }else{
             this.props.changeBetslipStatus("true");
         }
+    };
+
+    removeFromBetslip = (marketId) =>{
+        this.props.remove(marketId);
+        this.props.changeBetslipStatus("false");
     };
 
     render() {
@@ -32,7 +37,7 @@ class Betslip extends Component {
                             <div className="betslip-selection">
                                 <p className="betslip-selection-price">{selections[betslip.data[item]].price}</p>
                             </div>
-                            <button className="delete-selection">Delete</button>
+                            <button onClick={(id) => this.removeFromBetslip(markets[item].id)} className="delete-selection">Delete</button>
                         </div>
                     ))}
 
@@ -52,6 +57,7 @@ function mapStateToProps(state){
 
 function mapDispatchToProps(dispatch){
     return {
+        remove: (marketId) => dispatch(remove(marketId)),
         changeBetslipStatus: (status) => dispatch(changeBetslipStatus(status)),
     }
 }

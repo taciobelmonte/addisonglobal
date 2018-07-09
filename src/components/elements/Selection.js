@@ -8,18 +8,19 @@ class Selection extends Component {
 
         if(marketSelected === 'added'){
             //Remove from Betslip
-            this.props.remove(selectionId, marketId);
+            this.props.remove(marketId);
         }else{
             //Add to Betslip
             this.props.add(selectionId, marketId);
         }
+
     };
 
     render() {
         const {key, selection, market, selected} = this.props;
 
         return (
-            <a onClick={(id) => this.handleBetslip(selection.id, market, selected[market])}
+            <a onClick={() => this.handleBetslip(selection.id, market, selected[market])}
                key={key}
                className={"event-selection zoomIn animated " + selected[market]}>
                 <span className="selection-name">{selection.name}</span>
@@ -56,7 +57,7 @@ function mapStateToProps(state, props){
 function mapDispatchToProps(dispatch){
     return {
         add: (selectionId, marketId) => dispatch(add(selectionId, marketId)),
-        remove: (selectionId, marketId) => dispatch(remove(selectionId, marketId)),
+        remove: (marketId) => dispatch(remove(marketId)),
     }
 }
 

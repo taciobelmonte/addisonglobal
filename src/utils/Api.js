@@ -15,3 +15,4 @@ export const getData = () =>{
         .then(res => res.json())
         .then(data => data);
 };
+//res.json()
