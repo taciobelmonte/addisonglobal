@@ -38,7 +38,7 @@ The store was designed as follows:
 
 **betslip** : Keeps the betslip state and data inside it.
 
-###Some insights about the data normalization and redux store designed for this app.
+### Some insights about the data normalization and redux store designed for this app.
 
 The decision to generate a store in this format is due to the fact that a redux store follows the guideline of being the "single source of truth", that is, the store must faithfully reflect the state of the application.
 
